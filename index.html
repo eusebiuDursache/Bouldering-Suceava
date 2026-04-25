@@ -75,9 +75,9 @@
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8 text-[11px] font-bold tracking-[0.2em] uppercase">
-                <a href="#despre" class="hover:text-brand transition-colors">Ce este</a>
-                <a href="#viziune" class="hover:text-brand transition-colors">Viziune</a>
+            <div class="hidden md:flex items-center gap-8 text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400">
+                <a href="#experienta" class="hover:text-brand transition-colors">Cum se simte?</a>
+                <a href="#despre" class="hover:text-brand transition-colors">Bouldering?</a>
                 <a href="#formular" class="px-6 py-2.5 bg-brand text-white hover:bg-[#e63e15] transition-all rounded-full">
                     Vreau să încerc
                 </a>
@@ -99,16 +99,16 @@
              x-transition:leave-start="opacity-100 translate-x-0"
              x-transition:leave-end="opacity-0 translate-x-full"
              class="fixed inset-0 top-20 bg-black z-40 flex flex-col p-8 gap-8 md:hidden">
-            <a href="#despre" @click="isMenuOpen = false" class="text-4xl font-black uppercase italic italic">Bouldering?</a>
-            <a href="#beneficii" @click="isMenuOpen = false" class="text-4xl font-black uppercase italic italic">De ce acum?</a>
-            <a href="#formular" @click="isMenuOpen = false" class="text-4xl font-black text-brand uppercase italic italic">Vreau pe listă</a>
+            <a href="#experienta" @click="isMenuOpen = false" class="text-4xl font-black uppercase italic">Cum se simte?</a>
+            <a href="#despre" @click="isMenuOpen = false" class="text-4xl font-black uppercase italic">Bouldering?</a>
+            <a href="#formular" @click="isMenuOpen = false" class="text-4xl font-black text-brand uppercase italic">Vreau pe listă</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-10"></div>
             <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2003&auto=format&fit=crop" 
                  alt="[Imagine cu bouldering în Suceava]" 
@@ -117,9 +117,10 @@
 
         <div class="max-w-7xl mx-auto w-full z-20 relative">
             <div data-aos="fade-up" data-aos-duration="1000">
-                <div class="inline-flex items-center gap-2 py-2 px-4 border border-brand/50 bg-brand/10 rounded-full mb-8">
-                    <span class="text-brand text-[10px] md:text-xs font-black tracking-[0.3em] uppercase italic">Proiect în faza de validare</span>
-                </div>
+                <!-- 1. Hero Hook (DE CE NU EXISTĂ ASTA ÎN SUCEAVA?) -->
+                <p class="text-brand font-black tracking-[0.4em] uppercase italic mb-4 text-sm md:text-base">
+                    DE CE NU EXISTĂ ASTA ÎN SUCEAVA?
+                </p>
                 
                 <h1 class="text-5xl md:text-[85px] font-black mb-6 tracking-tighter leading-[0.95] uppercase italic">
                     Prima sală de<br><span class="text-brand not-italic">bouldering</span><br>din Suceava.
@@ -130,35 +131,75 @@
                 </p>
 
                 <div class="flex flex-col md:flex-row items-center gap-4">
-                    <a href="#formular" class="w-full md:w-auto px-10 py-6 bg-brand text-white font-black text-xl rounded-full flex items-center justify-center gap-3 hover:bg-[#e63e15] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,75,31,0.4)]">
-                        Vreau să încerc bouldering-ul <i data-lucide="arrow-right"></i>
+                    <!-- 6. Stronger CTA Text -->
+                    <a href="#formular" class="w-full md:w-auto px-12 py-7 bg-brand text-white font-black text-xl md:text-2xl rounded-full flex items-center justify-center gap-3 hover:bg-[#e63e15] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,75,31,0.4)] uppercase italic tracking-tighter">
+                        Vreau să încerc <i data-lucide="arrow-right"></i>
                     </a>
-                    <a href="#despre" class="w-full md:w-auto px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all font-bold text-lg rounded-full text-center">
-                        Află ce este bouldering-ul
+                    <a href="#experienta" class="w-full md:w-auto px-10 py-7 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all font-bold text-lg rounded-full text-center uppercase tracking-tighter">
+                        Cum se simte?
                     </a>
                 </div>
 
-                <div class="mt-12 flex items-center gap-3 text-gray-400">
-                    <div class="flex -space-x-3">
-                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center text-[10px] font-bold">SM</div>
-                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-700 flex items-center justify-center text-[10px] font-bold">AV</div>
-                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-600 flex items-center justify-center text-[10px] font-bold">RD</div>
+                <!-- 2. Real Urgency -->
+                <div class="mt-12 flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-white">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-brand"></span>
+                        </span>
+                        <p class="text-sm md:text-base font-black uppercase tracking-widest italic">
+                            Primele 100 persoane primesc acces early
+                        </p>
                     </div>
-                    <p class="text-sm font-medium tracking-wide">
-                        <span class="text-white font-black">Urgență:</span> Căutăm primii 200–400 de oameni interesați
+                    <p class="text-gray-500 text-xs md:text-sm font-bold uppercase tracking-widest">
+                        ⚠️ Atenție: Formularul se închide după 300 de înscrieri
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 4. Emotional Pattern Interrupt -->
+    <section class="py-12 bg-black border-y border-white/5 overflow-hidden">
+        <div class="whitespace-nowrap flex gap-12 animate-pulse text-brand font-black uppercase italic tracking-[0.5em] text-xs md:text-sm">
+            <span>⚠️ Nu este pentru toată lumea</span>
+            <span>⚠️ Devine dependent</span>
+            <span>⚠️ Nu este pentru toată lumea</span>
+            <span>⚠️ Devine dependent</span>
+            <span>⚠️ Nu este pentru toată lumea</span>
+            <span>⚠️ Devine dependent</span>
+        </div>
+    </section>
+
+    <!-- 5. Experience Section (Cum se simte?) -->
+    <section id="experienta" class="py-32 px-6 bg-[#050505]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-16 italic uppercase tracking-tighter" data-aos="fade-up">Cum se simte?</h2>
+            
+            <div class="space-y-12 text-2xl md:text-4xl font-light italic text-gray-400">
+                <div class="flex items-center justify-center gap-4" data-aos="fade-left" data-aos-delay="100">
+                    <span class="text-white font-black">Ajungi</span> <i data-lucide="chevrons-right" class="text-brand"></i> atmosferă, muzică, oameni
+                </div>
+                <div class="flex items-center justify-center gap-4" data-aos="fade-right" data-aos-delay="200">
+                    <span class="text-white font-black">Încerci</span> <i data-lucide="chevrons-right" class="text-brand"></i> cazi <i data-lucide="chevrons-right" class="text-brand"></i> râzi
+                </div>
+                <div class="flex items-center justify-center gap-4" data-aos="fade-left" data-aos-delay="300">
+                    <span class="text-white font-black">Reușești</span> <i data-lucide="chevrons-right" class="text-brand"></i> satisfacție maximă
+                </div>
+                <div class="flex items-center justify-center gap-4 text-brand" data-aos="fade-right" data-aos-delay="400">
+                    <span class="font-black underline decoration-4 underline-offset-8 italic">Pleci → vrei să revii</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Us Section (Trust & Credibility) -->
-    <section id="viziune" class="py-24 px-6 bg-white/5 border-y border-white/5">
+    <section id="viziune" class="py-32 px-6 bg-white/5 border-y border-white/5">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h3 class="text-brand font-black uppercase tracking-[0.3em] text-xs mb-4">De ce facem asta?</h3>
-            <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Suceava merită mai mult decât o sală clasică</h2>
+            <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter leading-tight">Suceava merită mai mult<br>decât o sală clasică</h2>
             <p class="text-xl text-gray-400 font-light leading-relaxed">
-                Pentru că Suceava nu are încă un astfel de loc, iar noi credem că există oameni care vor un spațiu de antrenament care să se simtă ca o comunitate, nu ca o corvoadă.
+                Pentru că Suceava nu are încă un astfel de loc, iar noi credem că există oameni care vor un spațiu de antrenament care să se simtă ca o <span class="text-white font-bold italic">comunitate</span>, nu ca o corvoadă.
             </p>
         </div>
     </section>
@@ -166,44 +207,38 @@
     <!-- FOMO Section -->
     <section class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-4xl md:text-6xl font-black mb-10 italic uppercase leading-none">De ce să te<br><span class="text-brand not-italic">înscrii acum?</span></h2>
+                    <h2 class="text-4xl md:text-6xl font-black mb-10 italic uppercase leading-none tracking-tighter">De ce să te<br><span class="text-brand not-italic">înscrii acum?</span></h2>
                     
-                    <ul class="space-y-6">
+                    <ul class="space-y-8">
                         <li class="flex items-start gap-4">
                             <div class="p-2 bg-brand/20 rounded-lg text-brand mt-1"><i data-lucide="check-circle" size="20"></i></div>
                             <div>
-                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Acces prioritar la deschidere</h4>
+                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Acces prioritar</h4>
                                 <p class="text-gray-500 text-sm">Vei fi prima persoană contactată când tăiem panglica.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
                             <div class="p-2 bg-brand/20 rounded-lg text-brand mt-1"><i data-lucide="gift" size="20"></i></div>
                             <div>
-                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Ofertă exclusivă Early Bird</h4>
-                                <p class="text-gray-500 text-sm">Preț special pentru abonament disponibil doar pentru cei de pe listă.</p>
+                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Ofertă Early Bird</h4>
+                                <p class="text-gray-500 text-sm">Preț special pentru abonament disponibil doar pentru primii înscriși.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
                             <div class="p-2 bg-brand/20 rounded-lg text-brand mt-1"><i data-lucide="zap" size="20"></i></div>
                             <div>
-                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Testezi sala înaintea tuturor</h4>
-                                <p class="text-gray-500 text-sm">Participi la sesiunile de testare "Beta" înainte de lansarea oficială.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="p-2 bg-brand/20 rounded-lg text-brand mt-1"><i data-lucide="heart" size="20"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Aduci bouldering-ul în oraș</h4>
-                                <p class="text-gray-500 text-sm">Fiecare înscriere ne ajută să demonstrăm că merită să investim în acest proiect.</p>
+                                <h4 class="text-xl font-bold uppercase italic tracking-tighter">Testezi sala</h4>
+                                <p class="text-gray-500 text-sm">Participi la sesiunile "Beta" înainte de lansarea oficială.</p>
                             </div>
                         </li>
                     </ul>
 
                     <div class="mt-12">
-                        <a href="#formular" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-black uppercase tracking-tighter rounded-full hover:bg-brand hover:text-white transition-all group italic">
-                            Intră pe lista early adopters <i data-lucide="move-right" class="group-hover:translate-x-2 transition-transform"></i>
+                        <!-- 6. Stronger CTA Text -->
+                        <a href="#formular" class="inline-flex items-center gap-3 px-10 py-6 bg-white text-black font-black uppercase tracking-tighter rounded-full hover:bg-brand hover:text-white transition-all group italic text-xl shadow-xl">
+                            Intru pe listă <i data-lucide="move-right" class="group-hover:translate-x-2 transition-transform"></i>
                         </a>
                     </div>
                 </div>
@@ -212,7 +247,7 @@
                          alt="[Acțiune cățărare]" 
                          class="rounded-3xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
                     <div class="absolute -bottom-6 -right-6 p-8 bg-brand text-white font-black text-2xl italic uppercase tracking-tighter rounded-2xl shadow-xl">
-                        Locuri <br>limitate
+                        Acces <br>Early
                     </div>
                 </div>
             </div>
@@ -220,115 +255,82 @@
     </section>
 
     <!-- Intermediate CTA -->
-    <section class="py-20 bg-brand text-center px-6">
+    <section class="py-32 bg-brand text-center px-6">
         <div class="max-w-4xl mx-auto" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase italic leading-none">Vrei să fii printre primii?</h2>
-            <a href="#formular" class="px-10 py-5 bg-black text-white font-black text-xl rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl">
-                Vreau acces early bird
+            <h2 class="text-4xl md:text-6xl font-black mb-10 uppercase italic leading-none tracking-tighter text-white">Vrei să fii printre primii?</h2>
+            <!-- 6. Stronger CTA Text -->
+            <a href="#formular" class="px-12 py-7 bg-black text-white font-black text-2xl md:text-3xl rounded-full hover:scale-105 active:scale-95 transition-all shadow-2xl uppercase italic">
+                Vreau acces early
             </a>
-            <p class="mt-6 text-white/70 font-bold uppercase tracking-widest text-xs italic">Formularul durează sub 30 secunde</p>
+            <!-- 3. Form Optimization Text -->
+            <p class="mt-8 text-white/80 font-black uppercase tracking-widest text-xs md:text-sm italic">⏱ Formularul durează sub 30 secunde</p>
         </div>
     </section>
 
-    <!-- Despre Bouldering -->
-    <section id="despre" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative group" data-aos="fade-right">
-                <div class="absolute -inset-4 bg-brand/20 rounded-3xl blur-2xl group-hover:bg-brand/30 transition-all duration-500"></div>
-                <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?q=80&w=2044&auto=format&fit=crop" 
-                     alt="[Bouldering la interior]" 
-                     class="relative rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl w-full h-[500px] object-cover">
-            </div>
-            <div data-aos="fade-left">
-                <h2 class="text-4xl font-black mb-8 italic uppercase leading-none">Nu e doar cățărat.<br><span class="text-outline">E un puzzle fizic.</span></h2>
-                <p class="text-xl text-gray-400 mb-8 leading-relaxed font-light">
-                    Bouldering-ul înseamnă cățărat la înălțimi reduse, protejat de saltele profesionale. Nu ai nevoie de corzi sau experiență. Este cel mai rapid mod de a-ți tonifia corpul în timp ce te distrezi cu prietenii.
-                </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div>
-                        <span class="block text-3xl font-black text-brand italic">100%</span>
-                        <span class="text-xs uppercase font-black tracking-widest text-gray-500">Siguranță</span>
-                    </div>
-                    <div>
-                        <span class="block text-3xl font-black text-brand italic">400+</span>
-                        <span class="text-xs uppercase font-black tracking-widest text-gray-500">Calorii / Oră</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Close & Form -->
+    <!-- Final Section (Ajută-ne să aducem bouldering-ul în Suceava) -->
     <section id="formular" class="py-32 px-6 bg-white/5 relative overflow-hidden">
-        <!-- Background elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand/10 rounded-full blur-[120px]"></div>
-        
         <div class="max-w-7xl mx-auto relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
                 <div data-aos="fade-up">
-                    <h2 class="text-5xl md:text-7xl font-black mb-8 italic uppercase leading-[0.85]">Ajută-ne să aducem bouldering-ul<br><span class="text-brand not-italic">în Suceava</span></h2>
-                    <p class="text-xl text-gray-300 max-w-xl font-light mb-10 leading-relaxed">
-                        Nu îți cerem bani acum. Vrem doar să vedem dacă există interes real. Dacă atingem pragul de 400 de înscrieri, pornim motoarele!
+                    <h2 class="text-5xl md:text-7xl font-black mb-8 italic uppercase leading-[0.85] tracking-tighter">Ajută-ne să aducem bouldering-ul<br><span class="text-brand not-italic">în Suceava</span></h2>
+                    <!-- 7. Strong Close Text -->
+                    <p class="text-xl text-gray-300 max-w-xl font-light mb-12 leading-relaxed">
+                        Nu îți cerem bani acum. Vrem doar să vedem dacă există interes real. Completează formularul și vei fi printre primii care primesc acces, ofertă early și invitație la lansare.
                     </p>
                     
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3 text-gray-400">
-                            <i data-lucide="timer" size="18" class="text-brand"></i>
-                            <span class="text-sm font-bold uppercase tracking-widest">Durează sub 30 secunde</span>
+                    <div class="space-y-6 mb-12">
+                        <!-- 3. Form Optimization -->
+                        <div class="flex items-center gap-4 text-gray-400">
+                            <i data-lucide="timer" size="24" class="text-brand"></i>
+                            <span class="text-sm md:text-base font-black uppercase tracking-widest italic">⏱ Formularul durează sub 30 secunde</span>
                         </div>
-                        <div class="flex items-center gap-3 text-gray-400">
-                            <i data-lucide="lock" size="18" class="text-brand"></i>
-                            <span class="text-sm font-bold uppercase tracking-widest">Datele tale sunt în siguranță</span>
+                        <div class="flex items-center gap-4 text-gray-400">
+                            <i data-lucide="wallet" size="24" class="text-brand"></i>
+                            <span class="text-sm md:text-base font-black uppercase tracking-widest italic">Nu îți cerem bani acum</span>
                         </div>
                     </div>
 
-                    <a href="#form-container" class="inline-flex md:hidden items-center gap-3 px-8 py-5 bg-brand text-white font-black uppercase rounded-full w-full justify-center">
-                        Completez formularul <i data-lucide="edit-3" size="20"></i>
+                    <a href="#form-container" class="inline-flex md:hidden items-center gap-3 px-8 py-6 bg-brand text-white font-black uppercase rounded-full w-full justify-center shadow-xl text-xl">
+                        Completez formularul <i data-lucide="edit-3" size="24"></i>
                     </a>
                 </div>
 
-                <div id="form-container" class="w-full bg-[#0f0f0f] rounded-3xl border border-white/10 shadow-2xl overflow-hidden h-[900px]" data-aos="zoom-in">
-                    <!-- Placeholder pentru iframe-ul tău cu formularul simplificat -->
+                <div id="form-container" class="w-full bg-[#0f0f0f] rounded-3xl border border-white/10 shadow-2xl overflow-hidden h-[850px]" data-aos="zoom-in">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU3hCiRZDmAz_O1qYvp3MEmuO1N8EMGgaxbm4hD6Fs08NDSA/viewform?embedded=true" 
                             width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
                         Se încarcă...
                     </iframe>
                 </div>
             </div>
+            
+            <div class="mt-24 text-center" data-aos="fade-up">
+                <!-- 6. Stronger CTA Text -->
+                <a href="#form-container" class="hidden md:inline-flex px-14 py-8 bg-brand text-white font-black text-2xl md:text-3xl rounded-full hover:scale-105 active:scale-95 transition-all shadow-2xl uppercase italic tracking-tighter">
+                    Vreau să fiu printre primii
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Final Branding Footer -->
-    <footer class="py-20 px-6 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="text-center md:text-left">
-                <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
-                    <span class="text-4xl font-black tracking-tighter text-brand italic">SENDLAB</span>
-                </div>
-                <p class="text-gray-600 uppercase tracking-[0.4em] text-[9px] font-black">Climb. Fall. Send. Suceava.</p>
-            </div>
-            
+    <footer class="py-24 px-6 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-gray-500 uppercase font-black text-[10px] tracking-[0.3em]">
+            <span class="text-2xl font-black tracking-tighter text-brand italic">SENDLAB</span>
             <div class="flex gap-10">
-                <a href="#" class="text-gray-500 hover:text-brand transition-colors uppercase font-black text-xs tracking-widest italic">Instagram</a>
-                <a href="#" class="text-gray-500 hover:text-brand transition-colors uppercase font-black text-xs tracking-widest italic">Facebook</a>
+                <a href="#" class="hover:text-brand transition-colors">Instagram</a>
+                <a href="#" class="hover:text-brand transition-colors">Facebook</a>
             </div>
-            
-            <p class="text-gray-700 text-[10px] font-medium text-center uppercase tracking-widest">
-                © 2024 SENDLAB. Un proiect de validare.
-            </p>
+            <p class="italic">© 2024 SENDLAB. PROIECT DE VALIDARE.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Init Lucide Icons
         lucide.createIcons();
-
-        // Init AOS
         AOS.init({
             once: true,
-            duration: 800,
-            offset: 50,
+            duration: 1000,
+            offset: 100,
             disable: 'mobile'
         });
     </script>
