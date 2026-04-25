@@ -6,25 +6,87 @@
     <title>SENDLAB - Bouldering Suceava</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: black; color: white; font-family: sans-serif; }
-        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2003'); background-size: cover; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: black; color: white; scroll-behavior: smooth; }
+        .text-orange-main { color: #FF4B1F; }
+        .bg-orange-main { background-color: #FF4B1F; }
+        .border-orange-main { border-color: #FF4B1F; }
     </style>
 </head>
-<body>
-    <nav style="padding: 20px; border-bottom: 1px solid #333;">
-        <span style="color: #FF4B1F; font-weight: 900; font-size: 24px;">SENDLAB</span>
-    </nav>
-    <div class="hero">
-        <div>
-            <h1 style="font-size: 5rem; font-weight: 900; font-style: italic;">CLIMB. FALL. <span style="color: #FF4B1F;">SEND.</span></h1>
-            <p style="font-size: 1.5rem; margin-bottom: 30px;">Prima sală de bouldering din Suceava.</p>
-            <a href="#formular" style="background: #FF4B1F; padding: 15px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; color: white;">ÎNSCRIE-TE ACUM</a>
+<body class="selection:bg-[#FF4B1F] selection:text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 h-20 flex items-center px-6">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-black tracking-tighter text-orange-main">SENDLAB</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase">
+                <a href="#despre" class="hover:text-orange-main transition-colors">Ce este</a>
+                <a href="#beneficii" class="hover:text-orange-main transition-colors">Beneficii</a>
+                <a href="#comunitate" class="hover:text-orange-main transition-colors">Comunitate</a>
+                <a href="#formular" class="px-6 py-2 border border-orange-main text-orange-main hover:bg-orange-main hover:text-white transition-all rounded-full italic font-bold">Înscrie-te</a>
+            </div>
         </div>
-    </div>
-    <div id="formular" style="padding: 50px 20px; text-align: center;">
-        <h2 style="font-size: 2rem; margin-bottom: 30px;">Vrei să facem asta realitate?</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU3hCiRZDmAz_O1qYvp3MEmuO1N8EMGgaxbm4hD6Fs08NDSA/viewform?embedded=true" width="100%" height="800" frameborder="0">Se încarcă...</iframe>
-    </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2003" class="w-full h-full object-cover opacity-60" alt="Bouldering">
+        </div>
+        <div class="max-w-7xl mx-auto w-full z-20 relative">
+            <h1 class="text-6xl md:text-[100px] font-black mb-6 tracking-tight leading-[0.9] uppercase italic">
+                Climb.<br>Fall.<br><span class="text-orange-main not-italic">Send.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-xl font-light">Prima sală de bouldering din Suceava. Provocări reale pentru cei ce caută mai mult decât o sală de fitness.</p>
+            <a href="#formular" class="inline-block px-10 py-5 bg-orange-main text-white font-black text-lg rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,75,31,0.3)]">Completează Formularul</a>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-y border-white/5 text-center">
+        <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Rutina te omoară?</h2>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto">Benzile de alergat și ganterele pot deveni plictisitoare. Bouldering-ul transformă antrenamentul într-un joc strategic de forță și agilitate.</p>
+    </section>
+
+    <section id="despre" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl h-[500px] object-cover" alt="Technique">
+            <div>
+                <h2 class="text-4xl font-black mb-8 italic uppercase">Puzzle-ul fizic de care ai nevoie</h2>
+                <p class="text-xl text-gray-400 mb-8">Bouldering-ul înseamnă cățărat la înălțimi reduse, protejat de saltele profesionale. Nu ai nevoie de corzi sau partener. Doar tu și peretele.</p>
+                <div class="grid grid-cols-2 gap-6 text-sm">
+                    <p><b>✔ Libertate totală</b></p>
+                    <p><b>✔ Siguranță maximă</b></p>
+                    <p><b>✔ Oricine poate începe</b></p>
+                    <p><b>✔ Focus mental</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comunitate" class="py-32 px-6 bg-[#080808]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 italic uppercase leading-[0.9]">Vii pentru sport. <br>Rămâi pentru <span class="text-orange-main">vibrație.</span></h2>
+                <p class="text-xl text-gray-400">La SENDLAB, pauzele sunt la fel de importante ca momentele de pe perete. Găsești oameni care te încurajează la fiecare mișcare.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?q=80&w=2044" class="rounded-2xl h-[400px] object-cover grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all shadow-2xl" alt="Community">
+        </div>
+    </section>
+
+    <section id="formular" class="py-32 px-6 bg-orange-main/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-8 italic uppercase">Ești gata de <span class="text-orange-main">traseu?</span></h2>
+            <p class="text-xl text-gray-400 mb-12">Completează formularul de mai jos și fii primul care află când deschidem în Suceava.</p>
+            <div class="bg-[#0f0f0f] rounded-3xl border border-white/10 overflow-hidden shadow-2xl" style="height: 800px;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU3hCiRZDmAz_O1qYvp3MEmuO1N8EMGgaxbm4hD6Fs08NDSA/viewform?embedded=true" width="100%" height="100%" frameborder="0">Se încarcă...</iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 opacity-50">
+        <p class="font-black text-orange-main">SENDLAB SUCEAVA © 2026</p>
+    </footer>
+
 </body>
 </html>
-export default App;
