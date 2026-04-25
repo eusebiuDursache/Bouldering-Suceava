@@ -5,99 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENDLAB - Bouldering Suceava</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: black; color: white; }
-        .orange-glow { text-shadow: 0 0 20px rgba(255, 75, 31, 0.5); }
-        .bg-orange-main { background-color: #FF4B1F; }
-        .text-orange-main { color: #FF4B1F; }
-        .border-orange-main { border-color: #FF4B1F; }
-        html { scroll-behavior: smooth; }
-        .grayscale-hover { filter: grayscale(100%); transition: all 0.7s ease; }
-        .grayscale-hover:hover { filter: grayscale(0%); }
+        body { background-color: black; color: white; font-family: sans-serif; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2003'); background-size: cover; }
     </style>
 </head>
-<body class="selection:bg-[#FF4B1F] selection:text-white overflow-x-hidden">
-
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 h-20 flex items-center">
-        <div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="text-2xl font-black tracking-tighter text-orange-main">SENDLAB</span>
-                <div class="h-1.5 w-1.5 bg-orange-main rounded-full mt-2"></div>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase">
-                <a href="#despre" class="hover:text-orange-main transition-colors">Ce este bouldering</a>
-                <a href="#beneficii" class="hover:text-orange-main transition-colors">De ce Suceava</a>
-                <a href="#comunitate" class="hover:text-orange-main transition-colors">Comunitate</a>
-                <a href="#formular" class="px-6 py-2 border border-orange-main text-orange-main hover:bg-orange-main hover:text-white transition-all duration-300 rounded-full">Înscrie-te</a>
-            </div>
-        </div>
+<body>
+    <nav style="padding: 20px; border-bottom: 1px solid #333;">
+        <span style="color: #FF4B1F; font-weight: 900; font-size: 24px;">SENDLAB</span>
     </nav>
-
-    <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-10"></div>
-            <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2003&auto=format&fit=crop" class="w-full h-full object-cover" alt="Bouldering">
+    <div class="hero">
+        <div>
+            <h1 style="font-size: 5rem; font-weight: 900; font-style: italic;">CLIMB. FALL. <span style="color: #FF4B1F;">SEND.</span></h1>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">Prima sală de bouldering din Suceava.</p>
+            <a href="#formular" style="background: #FF4B1F; padding: 15px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; color: white;">ÎNSCRIE-TE ACUM</a>
         </div>
-
-        <div class="max-w-7xl mx-auto w-full z-20 relative animate__animated animate__fadeInLeft">
-            <div class="inline-flex items-center gap-2 py-1 px-3 border border-[#FF4B1F]/30 bg-[#FF4B1F]/10 rounded-full mb-6">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF4B1F] opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#FF4B1F]"></span>
-                </span>
-                <span class="text-orange-main text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">Primul hub de bouldering din Suceava</span>
-            </div>
-            <h1 class="text-6xl md:text-[100px] font-black mb-6 tracking-tight leading-[0.9] uppercase italic">
-                Climb.<br>Fall.<br><span class="text-orange-main not-italic">Send.</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-xl font-light leading-snug">
-                Prima sală de bouldering din <b>Suceava</b>. Provocări reale pentru cei ce caută mai mult decât o sală de fitness.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#formular" class="px-10 py-5 bg-orange-main text-white font-black text-lg rounded-full text-center hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,75,31,0.3)]">Completează Formularul</a>
-                <a href="#despre" class="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors font-bold text-lg rounded-full text-center">Ce este bouldering-ul?</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="despre" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-orange-main/20 rounded-3xl blur-2xl"></div>
-                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" class="relative rounded-2xl grayscale-hover shadow-2xl w-full h-[500px] object-cover" alt="Technique">
-            </div>
-            <div>
-                <h2 class="text-4xl font-black mb-8 italic">Puzzle-ul fizic de care ai nevoie</h2>
-                <p class="text-xl text-gray-400 mb-8 leading-relaxed">Bouldering-ul înseamnă cățărat la înălțimi reduse, protejat de saltele profesionale. Nu ai nevoie de corzi sau partener. Doar tu, peretele și tehnica ta.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-                    <div class="flex gap-2"> <span class="text-orange-main">✔</span> <div><b>Libertate totală</b><br><span class="text-gray-500">Fără hamuri complicate.</span></div> </div>
-                    <div class="flex gap-2"> <span class="text-orange-main">✔</span> <div><b>Siguranță</b><br><span class="text-gray-500">Saltele groase incluse.</span></div> </div>
-                    <div class="flex gap-2"> <span class="text-orange-main">✔</span> <div><b>Accesibilitate</b><br><span class="text-gray-500">Oricine poate începe.</span></div> </div>
-                    <div class="flex gap-2"> <span class="text-orange-main">✔</span> <div><b>Focus</b><br><span class="text-gray-500">Antrenament mental și fizic.</span></div> </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="formular" class="py-32 px-6 bg-[#0a0a0a]">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-black mb-8 italic uppercase">Ești gata de <span class="text-orange-main">traseu?</span></h2>
-            <p class="text-xl text-gray-400 mb-12">Completează formularul de mai jos și fii primul care află când deschidem porțile în Suceava.</p>
-            <div class="bg-[#0f0f0f] rounded-3xl border border-white/10 shadow-2xl overflow-hidden h-[800px]">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU3hCiRZDmAz_O1qYvp3MEmuO1N8EMGgaxbm4hD6Fs08NDSA/viewform?embedded=true" width="100%" height="100%" frameborder="0">Se încarcă...</iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center border-t border-white/5">
-        <p class="text-orange-main font-black tracking-tighter text-xl">SENDLAB</p>
-        <p class="text-gray-600 text-[10px] uppercase tracking-widest mt-2">© 2024 SENDLAB SUCEAVA - Climb. Fall. Send.</p>
-    </footer>
-
+    </div>
+    <div id="formular" style="padding: 50px 20px; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 30px;">Vrei să facem asta realitate?</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU3hCiRZDmAz_O1qYvp3MEmuO1N8EMGgaxbm4hD6Fs08NDSA/viewform?embedded=true" width="100%" height="800" frameborder="0">Se încarcă...</iframe>
+    </div>
 </body>
 </html>
-
 export default App;
